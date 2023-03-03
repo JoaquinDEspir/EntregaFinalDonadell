@@ -1,0 +1,232 @@
+
+@font-face {
+    font-family: "worksans-medium", sans-serif;
+    src: url(../fonts/WorkSans-Medium.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+#cabeza{
+    border: 5px  solid blue;
+    border-style: dashed;
+
+}
+h1 {
+    margin-left: 30px;
+    font-family: "worksans-medium", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: blue;
+}
+h2{
+    margin-left: 30px;
+    font-family: "worksans-medium", sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    color: brown;
+
+}
+h3{
+    margin-left: 50px;
+    font-family: "worksans-medium", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color:red;
+}
+ul{
+    margin-left: 70px;
+    font-family: "worksans-medium", sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    color:green;
+}
+p{
+    font-family: "worksans-medium", sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    color:black;
+}
+form{
+    font-family: "worksans-medium", sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    color:black;
+}
+footer{
+    font-family: "worksans-medium", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color:black;
+}
+.box_modelling{
+    border: 5px solid black;
+    width: 250px;
+    height: 320px;
+    padding: 20px 30px 40px 30px;
+    margin: 20px 30px;
+}
+.flex-container {
+    border: 1px solid black;
+    background: #ccc;
+    padding: 10px;
+    margin: 10px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.caja {
+    /*Box-modeling*/
+    width: 120px;
+    height: 120px;
+    border: 1px solid gray;
+    margin: 5px;
+
+    /*Tipografías*/
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-family: "heebo-light", sans-serif;
+}
+.c1{
+    background-color: blueviolet;
+    order: 1;
+}
+.c2{
+    background-color: brown;
+    order: 2;
+}
+.c3{
+    background-color: cornflowerblue;
+    order: 3;
+}
+.c4{
+    background-color: darkgreen;
+}
+
+.grid-container{
+    width: 90%;
+    max-width: 1000px;
+    border: 10px solid black;
+    margin: auto;
+    height: 900px;
+    font-size: 50px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(4,1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.grid-container > div {
+    padding: 20px;
+    color: #fff;
+    background: #2f89fc;
+} 
+#grilla {
+    /*Activamos Grid*/
+    display: grid;
+    grid-template-areas:
+    "nav    header      header"
+    "nav    productos   publicidad"
+    "nav    servicios   publicidad"
+    "nav    footer      footer"
+    ;
+}
+.border {
+    border: 2px solid black;
+}
+#banner {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+    background: lightseagreen;
+}
+
+#productos {
+    grid-area: productos;
+    background: lightcoral;
+}
+
+#servicios {
+    grid-area: servicios;
+    background: lightslategray;
+}
+
+#navgrid {
+    grid-area: nav;
+    background: lightgoldenrodyellow;
+}
+
+aside {
+    grid-area: publicidad;
+    background: lightslategrey;
+}
+
+footer {
+    grid-area: pie;
+    background: lightsalmon;
+}
+
+/*REsponsive*/
+/*Por defecto*/
+main {
+    background-color: #2f89fc;
+}
+
+/*Grid Áreas, Responsive*/
+
+
+/*MediaQueries*/
+@media screen and (max-width: 479px){
+
+    /*Grid areas responsive*/
+    #grilla {
+        height: 500px;
+        display: grid;
+        grid-template-areas: 
+        "nav"
+        "header"
+        "productos"
+        "servicios"
+        "publicidad"
+        "pie"
+        ;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6,1fr);
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 700px) {
+    
+    main {
+        background-color: lightpink;
+    }
+
+    h3 {
+        font-size: 50px;
+        font-weight: lighter;
+        font-family: "heebo-light", sans-serif;
+        color: red;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1200px){
+    main {
+        background-color: lightslategray;
+    }
+}
+
+
+
+
+
+

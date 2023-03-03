@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../recusrsos/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>reservas</title>
+</head>
+<body>
+    <nav>
+        <a href="../index.html">inicio</a>
+        <a href="./arte.html">arte</a>
+        <a href="./contacto.html">contacto</a>
+        <a href="./informacion.html">informacion</a>
+        <a href="./reservas.html">reservas</a>
+    </nav>
+    <main>
+        <div class="box_modelling">
+        <h2>
+            crear una reserva
+        </h2>
+        <form action="procesar.php" method="get">
+
+            <p>
+            <label for="nombre">Ingrese su nombre: </label>
+            <input type="text" name="nombre" placeholder="Ingrese su nombre">
+            </p>
+    
+            <p>
+            <label for="apellido">Ingrese su Apellido:</label>
+            <input type="text" name="apellido" placeholder="Ingrese su apellido">
+            </p>
+    
+            <p>
+                <label for="email">Ingrese su correo eléctrónico: </label>
+                <input type="email" name="email" placeholder="hola@servidor.com.ar">
+            </p>
+            <form>
+                <label> elija su dia:
+                <input type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}" />
+                <span class="validity"></span>
+                </label>
+            </form>
+            <p>breve resumen de tu problema</p>
+    
+            <!--Textarea-->
+            <textarea name="mensaje" cols="30" rows="10"></textarea>
+    
+            <p>
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar Formulario</button>
+            </p>
+        </div>
+        </form>
+    </main>
+</body>
+</html>
