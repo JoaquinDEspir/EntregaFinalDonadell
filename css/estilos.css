@@ -11,7 +11,7 @@
 
 }
 #cabeza{
-    border: 5px  solid blue;
+    border: 5px  solid white;
     border-style: dashed;
 
 }
@@ -20,7 +20,7 @@ h1 {
     font-family: "worksans-medium", sans-serif;
     font-size: 25px;
     font-weight: bold;
-    color: blue;
+    color: black;
 }
 h2{
     margin-left: 30px;
@@ -127,16 +127,16 @@ footer{
 .grid-container > div {
     padding: 20px;
     color: #fff;
-    background: #2f89fc;
+    background: blue;
 } 
 #grilla {
     /*Activamos Grid*/
     display: grid;
     grid-template-areas:
-    "nav    header      header"
-    "nav    productos   publicidad"
-    "nav    servicios   publicidad"
-    "nav    footer      footer"
+    "nav    nav      nav"
+    "header  header   header"
+    "informacion    informacion   informacion"
+    "footer    footer      footer"
     ;
 }
 .border {
@@ -179,7 +179,7 @@ footer {
 /*REsponsive*/
 /*Por defecto*/
 main {
-    background-color: #2f89fc;
+    background-color: white;
 }
 
 /*Grid Áreas, Responsive*/
