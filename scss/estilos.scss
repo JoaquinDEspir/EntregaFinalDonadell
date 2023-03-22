@@ -1,0 +1,331 @@
+
+ /*Importación*/
+ @import "fuentes";
+ @import "fondos";
+ @import "navbar";
+ @import 'animate.css';
+
+@font-face {
+    font-family: "worksans-medium", sans-serif;
+    src: url(../fonts/WorkSans-Medium.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+$relleno: 30px;
+$bordes: 5px solid black;
+$color-principal: #B6874f;
+$color-back: white;
+header {
+    /*Variable local*/
+    $color-header: green;
+    background-color: $color-header;
+    nav {
+        padding: $relleno;
+        ul{
+            list-style-type: none;
+            li{
+                a{
+
+                &:hover{
+                font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+#cabeza{
+    border: 5px  solid white;
+    border-style: dashed;
+
+}
+$lista1: red, blue, yellow, green, gray, brown;
+@each $color in $lista1{
+	.color-#{$color}{//Interpolacion
+		background-color: $color;
+	}
+}
+@for $i from 1 through 6 {
+	.h#{$i}{//interpolacion
+		font-size: $i * 2rem;
+        color: $i
+	}
+$lista1: red, blue, yellow, green, gray, brown;
+}
+
+$estilos: (
+	color: blue,
+	centro: center,
+	tFuente: 35px,
+	1rem: 1rem
+);
+
+.card{
+	background: #fff;
+	border-radius: 4px;
+	padding: $relleno;
+	font-size: 25px;
+}
+.card{
+	background: #fff;
+	border-radius: 4px;
+	padding: $relleno;
+	font-size: 25px;
+}
+.avatar{
+	width: 100px;
+	height: 100px;
+	@extend .card;
+}
+@mixin crearBordes($colorBorde, $size,$shadow){
+	border: $size solid $colorBorde;
+	border-radius: $size;
+	box-shadow: 0px 0px $size $shadow;
+}
+.img{
+	@include crearBordes(red,10px,black);
+}
+
+.img-avatar{
+	@include crearBordes(green,5px, yellow)
+}
+
+h1 {
+    margin-left: 30px;
+
+    font-size: map-get($map: $estilos, $key: tFuente);
+    font-weight: bold;
+    color: map-get($map: $estilos , $key:color);
+    background-color:$color-back;
+		@include crearBordes(green, 4px, blue);
+}
+
+section article p{
+    font-size: 40px;
+}
+
+.links-style{
+    font-family: 'Heebo', sans-serif;
+    color: red;
+}
+h3 {
+
+    font-size: 2rem;
+    font-weight: bolder;
+    color: blueviolet;
+    text-align: center;
+}
+
+.logo-img {
+    width: 100px;
+    margin-top: 20px;
+    border: $bordes;
+		@extend .card;
+		@extend .avatar;
+}
+
+.links-style {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: lighter;
+    color: brown;
+    text-decoration: none;
+}
+
+.estilo-productos {
+    width: 50%;
+}
+ul{
+    margin-left: 70px;
+    font-family: "worksans-medium", sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    color:green;
+}
+p{
+    font-family: "worksans-medium", sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    color:black;
+}
+form{
+    font-family: "worksans-medium", sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    color:black;
+}
+footer{
+    font-family: "worksans-medium", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color:black;
+}
+.box_modelling{
+    border: 5px solid black;
+    width: 250px;
+    height: 320px;
+    padding: 20px 30px 40px 30px;
+    margin: 20px 30px;
+}
+.flex-container {
+    border: 1px solid black;
+    background: #ccc;
+    padding: 10px;
+    margin: 10px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.caja {
+    /*Box-modeling*/
+    width: 120px;
+    height: 120px;
+    border: 1px solid gray;
+    margin: 5px;
+
+    /*Tipografías*/
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-family: "heebo-light", sans-serif;
+}
+.c1{
+    background-color: blueviolet;
+    order: 1;
+}
+.c2{
+    background-color: brown;
+    order: 2;
+}
+.c3{
+    background-color: cornflowerblue;
+    order: 3;
+}
+.c4{
+    background-color: darkgreen;
+}
+
+.grid-container{
+    width: 90%;
+    max-width: 1000px;
+    border: 10px solid black;
+    margin: auto;
+    height: 900px;
+    font-size: 50px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(4,1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.grid-container > div {
+    padding: 20px;
+    color: #fff;
+    background: blue;
+} 
+#grilla {
+    /*Activamos Grid*/
+    display: grid;
+    grid-template-areas:
+    "nav    nav      nav"
+    "header  header   header"
+    "informacion    informacion   informacion"
+    "footer    footer      footer"
+    ;
+}
+.border {
+    border: 2px solid black;
+}
+#banner {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+    background: lightseagreen;
+}
+
+#productos {
+    grid-area: productos;
+    background: lightcoral;
+}
+
+#servicios {
+    grid-area: servicios;
+    background: lightslategray;
+}
+
+#navgrid {
+    grid-area: nav;
+    background: lightgoldenrodyellow;
+}
+
+aside {
+    grid-area: publicidad;
+    background: lightslategrey;
+}
+
+footer {
+    grid-area: pie;
+    background: lightsalmon;
+}
+
+/*REsponsive*/
+/*Por defecto*/
+main {
+    background-color: white;
+}
+
+/*Grid Áreas, Responsive*/
+
+
+/*MediaQueries*/
+@media screen and (max-width: 479px){
+
+    /*Grid areas responsive*/
+    #grilla {
+        height: 500px;
+        display: grid;
+        grid-template-areas: 
+        "nav"
+        "header"
+        "productos"
+        "servicios"
+        "publicidad"
+        "pie"
+        ;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6,1fr);
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 700px) {
+    
+    main {
+        background-color: lightpink;
+    }
+
+    h3 {
+        font-size: 50px;
+        font-weight: lighter;
+        font-family: "heebo-light", sans-serif;
+        color: red;
+    }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1200px){
+    main {
+        background-color: lightslategray;
+    }
+}
+
+

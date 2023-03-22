@@ -2,6 +2,7 @@
 /*Importación*/
 /*Navbar con flexbox*/
 /*Animaciones*/
+@import 'animate.css';
 .navegacion {
   display: flex;
   justify-content: space-around;
