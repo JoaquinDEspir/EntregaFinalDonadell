@@ -2,6 +2,8 @@
 /*Importación*/
 /*Navbar con flexbox*/
 /*Animaciones*/
+@import 'animate.css';
+
 .navegacion {
   display: flex;
   justify-content: space-around;
@@ -171,7 +173,6 @@ h1 {
   font-weight: bold;
   color: blue;
   background-color: white;
-  border: 4px solid green;
   border-radius: 4px;
   box-shadow: 0px 0px 4px blue;
 }
@@ -242,7 +243,7 @@ footer {
 .box_modelling {
   border: 5px solid black;
   width: 250px;
-  height: 320px;
+  height: 720px;
   padding: 20px 30px 40px 30px;
   margin: 20px 30px;
 }
@@ -391,4 +392,34 @@ main {
   main {
     background-color: lightslategray;
   }
-}/*# sourceMappingURL=estilos.css.map */
+}
+  .banner {
+    height: 100vh;
+    background: url("../recusrsos/prueba\ 2.jpg") no-repeat;
+    background-size: cover;
+    background-color:transparent;
+    background-position: center;
+    background-attachment: fixed;
+}
+.boton {
+  font-size: 14px;
+  padding: 8px 35px;
+  background: #000;
+  border: 25px;
+  text-decoration: none;
+  color: white;
+  height: 100px;
+  width: 100px;
+  transition: height 5s, width 2s;
+}
+
+.boton:hover {
+  height: 200px;
+  width: 200px;
+}
+.img {
+  height: auto;
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=estilos.css.map */

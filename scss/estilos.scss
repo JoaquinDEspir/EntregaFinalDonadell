@@ -328,4 +328,10 @@ main {
     }
 }
 
-
+@mixin banner {
+    height: 100vh;
+    background: url(../recusrsos/background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
